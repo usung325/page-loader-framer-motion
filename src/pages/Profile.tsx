@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import NavBar from '../components/NavBar'
+import Inner from '../layouts/Inner'
 
 export default function Profile() {
 
@@ -13,10 +14,6 @@ export default function Profile() {
         animate: {
             opacity: 1,
             scale: 1
-        },
-        exit: {
-            opacity: 0,
-            scale: 0.9
         },
         transition: {
         }
@@ -31,11 +28,16 @@ export default function Profile() {
                     <p>Hello this is the profile page</p>
                 </div>
             </motion.div> */}
-            <motion.div {...animateProps} className="flex">
-                <div className="flex mx-auto text-5xl mt-10">
-                    <p> Profile Page </p>
-                </div>
-            </motion.div>
+            <div className="bg-white">
+                <Inner>
+                    <div {...animateProps} className="flex flex-col">
+                        <NavBar />
+                        <div className="flex mx-auto text-5xl mt-10">
+                            <p> Profile Page </p>
+                        </div>
+                    </div>
+                </Inner>
+            </div>
         </>
     )
 }
