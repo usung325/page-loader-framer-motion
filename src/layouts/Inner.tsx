@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion'
+import { ReactNode } from 'react'
 
-export default function Inner({ children }) {
+interface InnerProps {
+    children: ReactNode
+}
+
+export default function Inner({ children }: InnerProps) {
 
     const scaleProps = {
         initial: {
