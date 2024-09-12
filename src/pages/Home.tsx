@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import NavBar from '../components/NavBar'
 import Inner from '../layouts/Inner'
 import { SplitText } from '../components/SplitText'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Home() {
@@ -49,12 +50,16 @@ export default function Home() {
                                 delay: 3.8
                             }}
                         >
-                            <div className="bg-blue-700 hover:bg-blue-400 text-white px-10 py-2 items-center text-center rounded-full">
-                                <p>Try Free</p>
-                            </div>
-                            <div className="bg-black hover:bg-slate-600 text-white px-10 py-2 items-center text-center rounded-full">
-                                <p>Join the Waitlist</p>
-                            </div>
+                            <NavLink to="/profile">
+                                <div className="bg-blue-700 hover:bg-blue-400 text-white px-10 py-2 items-center text-center rounded-full">
+                                    <p>Try Free</p>
+                                </div>
+                            </NavLink>
+                            <NavLink to="/profile">
+                                <div className="bg-black hover:bg-slate-600 text-white px-10 py-2 items-center text-center rounded-full">
+                                    <p>Join the Waitlist</p>
+                                </div>
+                            </NavLink>
 
                         </motion.div>
                     </div>
